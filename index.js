@@ -1,9 +1,10 @@
 import express from "express";
+import { connection } from "./src/mysql_connector.js";
 
 let app = express();
 
 app.listen("8000", function () {
-  console.log("todo ok");
+  console.log("aplicacion bien");
 });
 
 // Configuración pug
@@ -19,8 +20,8 @@ app.use(express.static("./css"));
 
 app.get("/", function (req, res) {
   //   res.send("Aplicación ok");
+  connection();
   res.render("index");
 });
 
-
-// MINUTO 23:20git
+// Minuto 38 wachinnnn
